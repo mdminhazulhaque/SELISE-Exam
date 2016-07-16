@@ -1,0 +1,37 @@
+<form role="form" ng-controller="ctrlStart" class="text-center">
+    <div class="form-group">
+        <label>
+            Create Match
+        </label>
+        <div class="row">
+            <div class="col-md-10">
+                <input type="text" class="form-control input-lg" id="team1name" placeholder="Team 1 Name">
+            </div>
+            <div class="col-md-2">
+                <img class="disabled" ng-click="toggleTeam()" id="team1opt" src="https://openclipart.org/image/96px/svg_to_png/191434/cricketball.png" alt="Cricket Ball" title="Cricket Ball" />
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>
+            VS
+        </label>
+        <div class="row">
+            <div class="col-md-10">
+                <input type="text" class="form-control input-lg" id="team2name" placeholder="Team 2 Name">
+            </div>
+            <div class="col-md-2">
+                <img ng-click="toggleTeam()" id="team2opt" src="https://openclipart.org/image/96px/svg_to_png/191434/cricketball.png" alt="Cricket Ball" title="Cricket Ball" />
+            </div>
+        </div>
+    </div>
+
+    <input id="bowlingWho" value="2" type="hidden" />
+
+    <div class="form-group">
+        <button type="submit" ng-click="startMatch()" class="btn btn-default btn-primary btn-lg text-uppercase">
+            Play Now
+        </button>
+    </div>
+</form>

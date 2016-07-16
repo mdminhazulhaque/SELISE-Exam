@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" ng-app="uiRouterSample">
+
+<head>
+    <meta charset="utf-8">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="app/app.js"></script>
+    
+    <script src="app/start/start.js"></script>
+    <script src="app/criccard/criccard.js"></script>
+
+    <title ng-bind="$state.current.name">SELISE</title>
+    <style>
+        img.disabled {
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="well text-center" style="margin-bottom: 0px; border-radius: 0px;border-bottom-right-radius: 0px;">
+                    <h2>SELISE CRICCARD</h2>
+                </div>
+                <div ui-view style="border:1px solid #ccc; padding: 20px;"></div>
+            </div>
+        </div>
+        <br>
+        <pre class="alert alert-warning">$state = {{$state.current.name}}
+$stateParams = {{$stateParams}}
+$state full url = {{ $state.$current.url.source }}</pre>
+
+    </div>
+</body>
+
+</html>
